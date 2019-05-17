@@ -1,0 +1,116 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: JinYuBao
+subtitle: 生活源于奋斗
+description: 生活源于奋斗
+keywords:
+author: Jin Yu Bao
+language: zh-Hans
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://www.zengmanhua.cn
+root: /
+permalink: :year/:month/:day/:title/ # 默认永久链接冗长，title中存在中文字符
+#permalink: :id.html # 尽量短，层次少，全小写，中划线连字，具有描述性，包含关键词
+permalink_defaults:
+
+#站点推送
+baidu_url_submit:
+  count: 5  # 提交最新链接数
+  host: www.zengmanhua.cn  # 你所提交的域名
+  token: jrv5N3NZOlPV61AY # 秘钥，请不要发布在公众仓库中
+  path: baidu_urls.txt # 文本文档路径，新链接会保存在此文本文档中
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: README.md
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+# 分类名映射
+category_map:
+  生活: life
+  娱乐: entertainment
+  技术: technology
+  其他: other
+tag_map:
+  生活: life
+  娱乐: entertainment
+  技术: technology
+  其他: other
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+
+# 搜索服务
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repo: 
+    github: git@github.com:gitjinyubao/gitjinyubao.github.io.git
+    coding: git@git.dev.tencent.com:JinYuBao/JinYuBao.git
+  branch: master
+- type: baidu_url_submitter  # 为deploy新增一个type
