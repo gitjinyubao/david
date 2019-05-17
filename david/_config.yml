@@ -6,7 +6,7 @@
 title: JinYuBao
 subtitle: 生活源于奋斗
 description: 生活源于奋斗
-keywords:
+keywords: life,java,centos,technology,Internet,movie,read
 author: Jin Yu Bao
 language: zh-Hans
 timezone:
@@ -95,8 +95,28 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+- hexo-douban
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 ## Themes: https://hexo.io/themes/
 theme: next
+# 豆瓣
+douban:
+  user: 148384265
+  builtin: false
+  book:
+    title: '我的阅读'
+    quote: '一蓑烟雨任平生，也无风雨也无晴'
+  movie:
+    title: '我的电影'
+    quote: '一蓑烟雨任平生，也无风雨也无晴'
+  timeout: 1000
 
 # 搜索服务
 search:
