@@ -38,18 +38,18 @@ favicon:
   small: /images/favicon-16x16-next.png
   medium: /images/favicon-32x32-next.png
   apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/LogoWhalelTwo.svg
+  safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set rss to false to disable feed link.
 # Leave rss as blank to use site's feed link, and install hexo-generator-feed: `npm install hexo-generator-feed --save`.
 # Set rss to specific value if you have burned your feed already.
-rss: /atom.xml
+rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  since: 2019
+  #since: 2015
 
   # Icon between year and copyright info.
   icon:
@@ -66,15 +66,15 @@ footer:
 
   powered:
     # Hexo link (Powered by Hexo).
-    enable: false
+    enable: true
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: false
+    version: true
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: false
+    enable: true
     # Version info of NexT after scheme info (vX.X.X).
-    version: false
+    version: true
 
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # http://www.beian.miit.gov.cn
@@ -100,7 +100,7 @@ creative_commons:
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
   enable: false
-  permalink: https://github.com/jinyubao
+  permalink: https://github.com/yourname
   title: Follow me on GitHub
 
 
@@ -143,7 +143,7 @@ exturl: false
 #baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: true
+baidu_push: false
 
 
 # ---------------------------------------------------------------
@@ -158,12 +158,9 @@ baidu_push: true
 # External url should start with http:// or https://
 menu:
   home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  读书: /books || book
-  电影: /movies || film
-  #游戏: /games || gamepad
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -180,10 +177,10 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
+scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-scheme: Gemini
-#scheme: Muse
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -200,8 +197,8 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/jinyubao || github
-  E-Mail: mailto:1345551624@qq.com || envelope
+  #GitHub: https://github.com/yourname || github
+  #E-Mail: mailto:yourname@gmail.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -217,21 +214,20 @@ social_icons:
   icons_only: false
   transition: false
 
-# Blogrolls
-links_title: 推荐阅读
-#links_layout: block
-links_layout: inline
+# Blog rolls
+links_icon: link
+links_title: Links
+links_layout: block
+#links_layout: inline
 links:
-  Github: https://www.github.com
-  知乎: https://www.zhihu.com
-  优设: http://www.uisdc.com/
+  #Title: http://example.com
 
 # Sidebar Avatar
 avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: http://prl6c63q7.bkt.clouddn.com/avatar.jpg
+  url: #/images/avatar.gif
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -315,8 +311,8 @@ excerpt_description: true
 # Automatically Excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
-  length: 50
+  enable: false
+  length: 150
 
 # Read more button
 # If true, the read more button would be displayed in excerpt section.
@@ -325,12 +321,10 @@ read_more_btn: true
 # Post meta display settings
 post_meta:
   item_text: true
-  created_at: true   # 创建时间
-  updated_at: true   # 更新时间
-  # Only show 'updated' if different from 'created'.
-  updated_diff: false # 只使用更新时间
-  # If true, post's time format will be hexo config's date_format + ' ' + time_format.
-  date_time_merge: false
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
   categories: true
 
 # Post wordcount display settings
@@ -338,9 +332,9 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: true
-  awl: 5
-  wpm: 200
+  item_text_total: false
+  awl: 4
+  wpm: 275
 
 codeblock:
   # Manual define the border radius in codeblock, leave it blank for the default value: 1
@@ -363,13 +357,13 @@ wechat_subscriber:
 reward_settings:
   # If true, reward would be displayed in every article by default.
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
-  enable: true
-  animation: true
-  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+  enable: false
+  animation: false
+  #comment: Donate comment here
 
 reward:
   #wechatpay: /images/wechatpay.png
-  alipay: /images/alipay.jpg
+  #alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
@@ -447,10 +441,10 @@ tagcloud:
 # ---------------------------------------------------------------
 
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
-  host: https://fonts.loli.net
+  host:
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -460,8 +454,7 @@ font:
   # Global font settings used for all elements in <body>.
   global:
     external: true
-    #family: Lato
-    family: Noto Serif SC
+    family: Lato
     size:
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
@@ -653,25 +646,7 @@ valine:
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: MTAyMC80NDI0NC8yMDc3Nw==
-
-# Online contact 
-daovoice: true
-daovoice_app_id: 3484a04a
-
-# 文章阅读信息
-post_wordcount:
-  item_text: true
-  wordcount: true  # 文章字数
-  min2read: true   # 阅读时间
-  totalcount: true  # 总共字数
-  separated_meta: true
-
-# 微信订阅
-#wechat_subscriber:
-#enabled: true
-#qcode: /uploads/wechat-qcode.jpg
-#description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！
+#livere_uid: your uid
 
 # Gitment
 # Introduction: https://github.com/imsun/gitment
@@ -770,13 +745,11 @@ needmoreshare2:
 # ---------------------------------------------------------------
 
 # Baidu Analytics ID
-baidu_analytics: 4b71d0039cde751d335fa8488a614ead
+#baidu_analytics:
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
 #growingio_analytics: #your projectId
-post_copyright:
-  enable: true
 
 # Google Analytics
 #google_analytics:
@@ -851,7 +824,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: true
+  enable: false
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -886,7 +859,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: true
+  enable: false
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -1009,7 +982,7 @@ lazyload: false
 
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
-pace: true
+pace: false
 # Themes list:
 # pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
 # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
@@ -1019,7 +992,7 @@ pace_theme: pace-theme-minimal
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
-  enable: true
+  enable: false
   onmobile: true # display on mobile or not
   color: "0,0,255" # RGB values, use ',' to separate
   opacity: 0.5 # the opacity of line: 0~1
@@ -1052,15 +1025,6 @@ canvas_ribbon:
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! See: https://theme-next.org/docs/advanced-settings
 #! ---------------------------------------------------------------
-#jiathis分享
-#jiathis:
-  #uid: 2160658
-
-#百度分享
-baidushare:
-  type: button       # type: button | slide
-
-
 
 # Script Vendors. Set a CDN address for the vendor you want to customize.
 # For example
