@@ -177,10 +177,10 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -197,8 +197,8 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/jinyubao || github
+  E-Mail: mailto:1345551624@qq.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -214,20 +214,21 @@ social_icons:
   icons_only: false
   transition: false
 
-# Blog rolls
-links_icon: link
-links_title: Links
-links_layout: block
-#links_layout: inline
+# Blogrolls
+links_title: 推荐阅读
+#links_layout: block
+links_layout: inline
 links:
-  #Title: http://example.com
+  Github: https://www.github.com
+  知乎: https://www.zhihu.com
+  优设: http://www.uisdc.com/
 
 # Sidebar Avatar
 avatar:
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: http://prl6c63q7.bkt.clouddn.com/avatar.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -357,13 +358,13 @@ wechat_subscriber:
 reward_settings:
   # If true, reward would be displayed in every article by default.
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
-  enable: false
-  animation: false
-  #comment: Donate comment here
+  enable: true
+  animation: true
+  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 
 reward:
   #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  alipay: /images/alipay.jpg
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
@@ -441,10 +442,10 @@ tagcloud:
 # ---------------------------------------------------------------
 
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
-  host:
+  host: https://fonts.loli.net
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -454,7 +455,8 @@ font:
   # Global font settings used for all elements in <body>.
   global:
     external: true
-    family: Lato
+    #family: Lato
+    family: Noto Serif SC
     size:
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
