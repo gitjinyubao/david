@@ -30,6 +30,7 @@ i18n_dir: :lang
 skip_render: README.md
 
 # Writing
+# Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
@@ -39,10 +40,12 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+# 代码高亮设置
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  # 代码自动高亮
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -84,6 +87,27 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+# RSS，要先进入站点文件夹根目录安装插件
+# npm install hexo-generator-feed --save 即可
+# 无需更多配置
+feed:
+  type: atom
+  path: atom.xml
+  # 文章数，0 为全部
+  limit: 0
+  hub:
+  # 是否包含文章内容
+  content: true
+
+# emoji 支持，教程见本文 6.3 节
+githubEmojis:
+  enable: true
+  idName: github-emoji
+  unicode: false
+  styles:
+  localEmojis:
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
